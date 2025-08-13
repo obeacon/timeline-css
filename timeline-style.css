@@ -1,4 +1,4 @@
-/* Match site font and colors */
+/* Match site fonts and colors dynamically */
 .tl-timeline,
 .tl-timeline * {
   font-family: inherit !important;
@@ -7,27 +7,42 @@
 }
 
 /* Hide KnightLab logo */
-.tl-logo {
+.tl-credit {
   display: none !important;
 }
 
-/* Hide bottom dates (time navigation labels) */
-.tl-timeaxis .tl-timeaxis-major,
-.tl-timeaxis .tl-timeaxis-minor {
+/* Hide bottom navigation dates */
+.tl-timenav-background,
+.tl-timenav-line,
+.tl-timenav-slider,
+.tl-timenav-axis,
+.tl-timenav-timeaxis {
   display: none !important;
 }
 
-/* Left-align first slide */
-.tl-slidenav-next:before {
-  content: '' !important;
-}
-.tl-timeline {
-  transform: translateX(0) !important;
+/* Left-align the first slide content */
+.tl-slide-content {
+  justify-content: flex-start !important;
+  align-items: flex-start !important;
+  text-align: left !important;
 }
 
-/* Fade-in effect for smoother load */
+/* Fade-in effect for slides */
 .tl-slide {
   opacity: 0;
   transition: opacity 0.6s ease-in-out;
 }
-.tl-slide.tl-slide-loaded {
+.tl-slide.tl-slide-active {
+  opacity: 1;
+}
+
+/* Ensure background is transparent so site styles show through */
+.tl-timeline {
+  background: transparent !important;
+}
+
+/* Remove default shadows from text and media */
+.tl-text-content,
+.tl-media-content {
+  text-shadow: none !important;
+}

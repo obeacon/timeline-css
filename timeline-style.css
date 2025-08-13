@@ -1,0 +1,33 @@
+/* Match site font and colors */
+.tl-timeline,
+.tl-timeline * {
+  font-family: inherit !important;
+  color: inherit !important;
+  text-shadow: none !important;
+}
+
+/* Hide KnightLab logo */
+.tl-logo {
+  display: none !important;
+}
+
+/* Hide bottom dates (time navigation labels) */
+.tl-timeaxis .tl-timeaxis-major,
+.tl-timeaxis .tl-timeaxis-minor {
+  display: none !important;
+}
+
+/* Left-align first slide */
+.tl-slidenav-next:before {
+  content: '' !important;
+}
+.tl-timeline {
+  transform: translateX(0) !important;
+}
+
+/* Fade-in effect for smoother load */
+.tl-slide {
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+}
+.tl-slide.tl-slide-loaded {
